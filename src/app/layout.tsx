@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import { cn } from "@/lib/utils";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -10,6 +11,13 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "ForthTech",
   description: "The Tech-solutions",
+  openGraph: {
+    siteName: "FothTech",
+    type: "website",
+    title: "FothTech",
+    description: "The community which provide the very cool services",
+    locale: "en",
+  }
 };
 
 export default function RootLayout({
@@ -19,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={poppins.className}>{children}</body>
+      <body className={cn(poppins.className, process.env.NODE_ENV === "development" && "debug-screens")}>{children}</body>
     </html>
   );
 }
