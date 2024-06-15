@@ -46,6 +46,12 @@ export default function Home() {
           <section className="flex flex-col h-full p-4 bg-transparent mx-auto text-white pt-4 items-center justify-center">
               <span className="text-center text-3xl font-semibold">Forth<span className="text-primary">Tech</span></span>
               <p className="text-center mt-2 sm:px-20 md:px-40">{`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`} </p>
+          <section className="absolute bottom-4">
+            <Image src={"/Scroll_Icon.gif"} alt={"scroll"}  
+            height={60}
+            width={60}            
+            />
+          </section>
           </section>
         </div>
       </section>
